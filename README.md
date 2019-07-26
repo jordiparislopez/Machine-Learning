@@ -6,4 +6,4 @@ Current files:
 
   - Linear regression: performs a simple regression routine that allows to predict value given a previously known training set.
   - Image recognition: Trains and evaluates a large dataset 10 classes of 28px x 28px grayscale pictures. Different callbacks are used.
-  - Image classification: Trains the algorithm so that images can be classified according to a binary set of classes. 
+  - Image classification: Trains the algorithm so that images can be classified according to a binary set of classes. This code requires the module wget to retrieve dataset. 
