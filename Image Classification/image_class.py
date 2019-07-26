@@ -7,15 +7,16 @@
 
 """
 
-# Import tensorflow, of and zipfile libraries.
+# Import tensorflow, os, wget and zipfile libraries.
 import tensorflow as tf
 import os
+import wget
 import zipfile
 
 # Import dataset from Laurence Moroney repository
-!wget --no-check-certificate \
-    "https://storage.googleapis.com/laurencemoroney-blog.appspot.com/happy-or-sad.zip" \
-    -O "/tmp/happy-or-sad.zip"
+url = 'https://storage.googleapis.com/laurencemoroney-blog.appspot.com/happy-or-sad.zip'
+wget.download(url, "/tmp/happy-or-sad.zip")
+
 
 # Get the imported zip file and extract the contents into a temporary directory.
 zip_ref = zipfile.ZipFile("/tmp/happy-or-sad.zip", 'r')
@@ -26,9 +27,10 @@ zip_ref.close()
 class myCallback(tf.keras.callbacks.Callback):
 
   def on_epoch_end(self, epoch, logs={}):
-    if(logs.get('accuracy') > 0.999):   # Condition for stopping.
+    if(logs.get('acc') > 0.999):   # Condition for stopping.
       print("99.9% accuracy reached. \nStopping routine.\n") # Print message.
       self.model.stop_training = True   # Activation of the break.
+
 
 # Definition of the convolutional model following:
 # 1. Apply a sequence of 2D convolutions (3x3) and maxpooling to reduce input size.
