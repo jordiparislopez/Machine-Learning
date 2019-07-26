@@ -54,4 +54,4 @@ callbacks = myCallback()
 model.fit(training_images, training_labels, epochs=10, callbacks=[callbacks])
 
 # Evaluate test values to see how trustworthy is our training.
-model.evaluate(x_test, y_test)
+model.evaluate(test_images, test_labels)
