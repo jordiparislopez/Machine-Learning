@@ -1,5 +1,6 @@
 """
-
+    Image_class_1.py
+    
     This file uses a dataset of happy and sad 150px x 150px RGB pictures to be
     classified binarily (0 sad, 1 happy). To achieve so, this code must import
     the files, train a model by reducing the size of the picture and apply
