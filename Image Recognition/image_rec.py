@@ -1,4 +1,5 @@
 """
+    Image_rec.py
 
     This file contains the routine to develop an image recognition algorithm
     using Tensorflow and Keras. Here, we use the open source mnist
