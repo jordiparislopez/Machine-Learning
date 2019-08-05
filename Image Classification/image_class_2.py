@@ -1,4 +1,5 @@
 """
+    Image_class_2.py
 
     This file uses a dataset of cats and dogs RGB pictures to be
     classified binarily (either cat or dog). The mechanics behind this code
