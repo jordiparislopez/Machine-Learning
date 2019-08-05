@@ -1,4 +1,5 @@
 """
+    Image_rec_conv.py
 
     This code performs an image recognition routine using a convolutional
     neural network. The results shall be similar than the ones obtained in the
